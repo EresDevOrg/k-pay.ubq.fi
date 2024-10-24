@@ -45,7 +45,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: yarn run build
-          start: npx wrangler pages dev static --port 8080 --binding USE_RELOADLY_SANDBOX=true RELOADLY_API_CLIENT_ID="$RELOADLY_SANDBOX_API_CLIENT_ID" RELOADLY_API_CLIENT_SECRET="$RELOADLY_SANDBOX_API_CLIENT_SECRET" &
+          start: npx wrangler pages dev static --port 8080 --binding USE_RELOADLY_SANDBOX="true" RELOADLY_API_CLIENT_ID="$RELOADLY_SANDBOX_API_CLIENT_ID" RELOADLY_API_CLIENT_SECRET="$RELOADLY_SANDBOX_API_CLIENT_SECRET" &
 
         env:
           RELOADLY_SANDBOX_API_CLIENT_ID: ${{ secrets.RELOADLY_SANDBOX_API_CLIENT_ID }}
